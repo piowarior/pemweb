@@ -76,6 +76,33 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipreiscing elit. Lacus penatibus tincidunt</p>
         </div>
       </div>
+
+      <!-- @foreach ($product as $index => $item)
+        <div class="col-lg-4 col-md-6 service-item">
+          <a class="text-black text-decoration-none" href="#">
+            <div class="block">
+              <span class="colored-box text-center h3 mb-4">{{ str_pad($index + 1, 2, '0', STR_PAD_LEFT) }}</span>
+              @if ($item->image)
+                <div class="overflow-hidden rounded-lg shadow-lg" style="max-height: 400px;">
+                  <img
+                  loading="lazy"
+                  decoding="async"
+                  src="{{ asset('storage/' . $item->image) }}"
+                  alt="{{ $item->name }}"
+                  class="img-fluid w-100 transition-transform duration-300 ease-in-out"
+                  style="object-fit: cover; height: 100%;"
+                  onmouseover="this.style.transform='scale(1.05)'"
+                  onmouseout="this.style.transform='scale(1)'"
+                  >
+                </div>
+              @endif
+            </div>
+            <h3 class="mb-3 service-title">{{ $item->name }}</h3>
+            <p class="mb-0 service-description">{{ $item->description }}</p>
+          </a>
+        </div>
+      @endforeach -->
+
       <div class="col-lg-4 col-md-6 service-item">
         <a class="text-black" href="service-details.html">
           <div class="block"> <span class="colored-box text-center h3 mb-4">01</span>
